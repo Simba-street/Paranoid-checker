@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Paranoid Checker | Repository Preview</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #0b0f14;
+        color: #edf3f8;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        background: #0b0f14;
+      }
+
+      main {
+        width: min(100% - 40px, 1080px);
+        margin: 0 auto;
+        padding: 72px 0;
+      }
+
+      header {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 72px;
+      }
+
+      .mark {
+        display: grid;
+        width: 42px;
+        height: 42px;
+        place-items: center;
+        border: 1px solid #2a3948;
+        border-radius: 12px;
+        background: #121922;
+        color: #77d5bc;
+        font-weight: 800;
+      }
+
+      .brand { font-size: 15px; font-weight: 700; letter-spacing: 0.01em; }
+      .eyebrow { margin: 0 0 16px; color: #77d5bc; font-size: 13px; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; }
+      h1 { max-width: 760px; margin: 0; font-size: clamp(42px, 7vw, 78px); line-height: 0.98; letter-spacing: -0.055em; }
+      .intro { max-width: 670px; margin: 28px 0 0; color: #aab8c5; font-size: clamp(18px, 2vw, 22px); line-height: 1.55; }
+
+      .grid {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 18px;
+        margin-top: 64px;
+      }
+
+      article {
+        min-height: 220px;
+        padding: 30px;
+        border: 1px solid #263443;
+        border-radius: 20px;
+        background: #111821;
+      }
+
+      article.accent { border-top: 3px solid #77d5bc; }
+      .label { margin: 0 0 30px; color: #8291a0; font-size: 12px; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+      h2 { margin: 0 0 12px; font-size: 24px; letter-spacing: -0.025em; }
+      article p { margin: 0; color: #aab8c5; line-height: 1.65; }
+
+      .status {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        margin-top: 26px;
+        padding: 8px 11px;
+        border-radius: 999px;
+        background: #17271f;
+        color: #98e3c9;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .dot { width: 7px; height: 7px; border-radius: 50%; background: #77d5bc; }
+
+      footer {
+        display: flex;
+        justify-content: space-between;
+        gap: 18px;
+        margin-top: 24px;
+        color: #6f7e8c;
+        font-size: 13px;
+      }
+
+      code { color: #bdcbd7; }
+
+      @media (max-width: 720px) {
+        main { width: min(100% - 28px, 1080px); padding: 38px 0; }
+        header { margin-bottom: 52px; }
+        .grid { grid-template-columns: 1fr; margin-top: 46px; }
+        article { min-height: auto; padding: 24px; }
+        footer { flex-direction: column; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="mark" aria-hidden="true">PC</div>
+        <div class="brand">Paranoid Checker</div>
+      </header>
+
+      <section aria-labelledby="page-title">
+        <p class="eyebrow">Repository preview</p>
+        <h1 id="page-title">Alloy environment is online.</h1>
+        <p class="intro">This repository currently contains project documentation only. Its reproducible Alloy workspace is running and ready for checked-in application source.</p>
+      </section>
+
+      <section class="grid" aria-label="Environment details">
+        <article class="accent">
+          <p class="label">Runtime</p>
+          <h2>Container healthy</h2>
+          <p>The preview is served from the repository by the checked-in Docker Compose configuration on port 3000.</p>
+          <div class="status"><span class="dot" aria-hidden="true"></span>Ready for Alloy</div>
+        </article>
+
+        <article>
+          <p class="label">Source status</p>
+          <h2>No app source committed</h2>
+          <p>The current Git tree has a README and an external download link, but no application code, package manifest, or build instructions.</p>
+        </article>
+      </section>
+
+      <footer>
+        <span>Simba-street / Paranoid-checker</span>
+        <code>docker-compose.alloy.yaml</code>
+      </footer>
+    </main>
+  </body>
+</html>
